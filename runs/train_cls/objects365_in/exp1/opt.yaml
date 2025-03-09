@@ -1,0 +1,15 @@
+ind_dataset: objects365_in
+hyp: ../data/hyps/hyp.OOD.yaml
+img_size: 640
+num_workers: 6
+arch: yolo_backbone
+cfg: ../models/yolov5s - backbone.yaml
+weights: ../weights/yolo/yolov5s.pth
+n_epoch: 30
+batch_size: 64
+l_rate: 0.0001
+project: ../final_runs/train_cls/objects365_in
+name: exp
+seed: 0
+n_classes: 20
+save_dir: ../final_runs/train_cls/objects365_in/exp1

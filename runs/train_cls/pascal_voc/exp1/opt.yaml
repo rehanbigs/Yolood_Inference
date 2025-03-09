@@ -1,0 +1,15 @@
+ind_dataset: pascal_voc
+hyp: ../data/hyps/hyp.OOD.yaml
+img_size: 640
+num_workers: 6
+arch: yolo_backbone
+cfg: ../models/yolov5s - backbone.yaml
+weights: ../weights/yolo/yolov5s.pth
+n_epoch: 30
+batch_size: 64
+l_rate: 0.0001
+project: ../runs/train_cls/pascal_voc
+name: exp
+seed: 0
+n_classes: 20
+save_dir: ../runs/train_cls/pascal_voc/exp1

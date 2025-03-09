@@ -1,0 +1,43 @@
+weights: ../weights/yolo/yolov5s.pt
+cfg: ../models/yolov5s - OOD1.yaml
+data: ../data/pascal_voc.yaml
+hyp: ../data/hyps/hyp.OOD.yaml
+epochs: 30
+batch_size: 64
+imgsz: 640
+rect: false
+nosave: false
+noval: false
+cache: null
+device: '0'
+optimizer: Adam
+workers: 6
+project: ../runs/train_yolood/pascal_voc
+name: exp
+exist_ok: false
+label_smoothing: 0.0
+freeze:
+- 0
+exclude:
+- 10
+- 11
+- 12
+- 13
+- 14
+- 15
+- 16
+- 17
+- 18
+- 19
+- 20
+- 21
+- 22
+- 23
+save_period: -1
+local_rank: -1
+resp_cell_offset:
+- 0.5
+- 0.1
+- 0.0
+seed: 0
+save_dir: ../runs/train_yolood/pascal_voc/exp1
